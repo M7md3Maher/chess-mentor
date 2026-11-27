@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Chess Mentor</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chess Mentor">
+<meta name="theme-color" content="#111111">
+
 <style>
 <style>
 .ghost{position:absolute;right:auto;bottom:auto;z-index:25;display:flex;align-items:center;justify-content:center;transition:transform .15s cubic-bezier(.25,.46,.45,.94);will-change:transform;pointer-events:none;line-height:1}
@@ -4988,6 +4994,13 @@ if(!window.__MENTOR_MANUAL_BOOT__){
 window.__mentor={play:play,Engine:Engine,Store:Store,newGame:newGame,boardClick:boardClick,analyzeLastGame:analyzeLastGame,startPractice:startPractice,OPENINGS:OPENINGS,unlock:unlock,showScreen:showScreen,renderOpenings:renderOpenings,pickLevelMove:pickLevelMove,LEVELS:LEVELS,botChoose:botChoose};
 })();
 
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    });
+  }
 </script>
 </body>
 </html>
