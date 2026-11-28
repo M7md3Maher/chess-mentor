@@ -1,5 +1,5 @@
 // Chess Mentor service worker: keeps the app on the device so it opens without a connection.
-const CACHE = 'chess-mentor-v1';
+const CACHE = 'chess-mentor-v40';
 const PRECACHE = ['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./icon-maskable-512.png','./apple-touch-icon.png'];
 
 self.addEventListener('install', (event) => {
